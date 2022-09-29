@@ -2,17 +2,13 @@ addEventListener("DOMContentLoaded", (e) => {
     let form = document.querySelector("#form");
     form.addEventListener("submit", (e) => {
         e.preventDefault();
-        let con=1,notaPro=0;
-        while(con<=5){
-            let nombre=prompt(`Ingrese el nombre del estudiante ${con}`);
-            let apellido = prompt(`Ingrese el apellido del estudiante ${con}`);
-            let edad = parseInt(prompt(`Ingrese la edad del estudiante ${con}`));
-            let nota = parseInt(prompt(`Ingrese la nota del estudiante ${con}`));
-            notaPro+=nota;
-            alert(`El nombre del estudiante es ${nombre} y su apellido es ${apellido} tiene una edad de ${edad} y su nota es de ${nota}`);
+        let mujer = 1 ,hombre=7,con=0;
+        while(mujer+hombre<=42){
             con++;
+            mujer++;
+            hombre++;
         }
-        let pro = notaPro/5;
-        alert(`La nota promedio es de: ${pro}`);
+        alert(`La mujer numero ${mujer} bailo con el hombre ${hombre}`)
+        alert(`La cantidad de mujeres que habia en el baile son ${con}`);
     });
 })
