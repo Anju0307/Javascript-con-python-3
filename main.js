@@ -3,24 +3,28 @@ addEventListener("DOMContentLoaded", (e) => {
     form.addEventListener("submit", (e) => {
         e.preventDefault();
         let vehiculos = document.querySelector("#vehiculos").value;
-        let con=1, autobus=0, camion=0, motocicleta=0, turismo=0, pasajeros=0;
+        let con=1,amari=0,rosa=0,roja=0,verde=0,azul=0;
         while(vehiculos>=con){
-            let vehiculo= prompt("Ingrese el tipo de vehiculo");
-            if (vehiculo=="autobus"){
-                autobus++;
-            } else if (vehiculo=="camion"){
-                camion++;
-            } else if (vehiculo=='motocicleta'){
-                motocicleta++;
-            } else if (vehiculo='turismo'){
-                pasajeros+=parseInt(prompt("Cantidad de turistas en el vehiculo: "));
-                turismo++;
+            let numeroPlaca=parseInt(prompt("Ingrese el numero de la placa"));
+            if (numeroPlaca == 1 || numeroPlaca==2){
+                amari++;
+            } else if (numeroPlaca == 3 || numeroPlaca==4){
+                rosa++;
+            } else if (numeroPlaca == 5 || numeroPlaca==6){
+                roja++;
+            } else if( numeroPlaca ==7 || numeroPlaca ==8){
+                verde++;
+            } else if (numeroPlaca == 9 || numeroPlaca==0){
+                azul++;
+            } else {
+                continue;
             }
             con++;
         }
-        alert(`La cantidad de autobuses son: ${autobus}`);
-        alert(`La cantidad de camion son: ${camion}`);
-        alert(`La cantidad de motocicleta son: ${motocicleta}`);
-        alert(`La cantidad de turismo son: ${turismo} y sus pasajeros totales son ${pasajeros}`);
+        alert(`La cantidad de vehiculos con color amarillo son: ${amari}`);
+        alert(`La cantidad de vehiculos con color rosa son: ${rosa}`);
+        alert(`La cantidad de vehiculos con color roja son: ${roja}`);
+        alert(`La cantidad de vehiculos con color verde son: ${verde}`);
+        alert(`La cantidad de vehiculos con color azul son: ${azul}`);
     });
 })
